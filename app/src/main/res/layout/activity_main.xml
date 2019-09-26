@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_sensors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/ll_debug"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <Button
+                android:id="@+id/bt_chart"
+                android:layout_width="80sp"
+                android:layout_height="wrap_content"
+                android:background="#00FF0000"
+                android:onClick="onClick"
+                android:text="Chart"
+                tools:layout_editor_absoluteX="119dp"
+                tools:layout_editor_absoluteY="341dp" />
+
+            <TextView
+                android:id="@+id/tv_cached"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/tv_temp_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ambient Temperature:"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_temp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_temp_val"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="---.-"
+                android:textAlignment="viewEnd"
+                android:textSize="84sp" />
+
+            <TextView
+                android:id="@+id/tv_temp_unit"
+                android:layout_width="80sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="°C"
+                android:textAlignment="center"
+                android:textSize="36sp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/tv_hum_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Relative Humidity:"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_hum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_hum_val"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="---.-"
+                android:textAlignment="viewEnd"
+                android:textSize="84sp" />
+
+            <TextView
+                android:id="@+id/tv_hum_unit"
+                android:layout_width="80sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="%"
+                android:textAlignment="center"
+                android:textSize="36sp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
