@@ -32,7 +32,6 @@
                 android:layout_width="80sp"
                 android:layout_height="wrap_content"
                 android:background="#00FF0000"
-                android:onClick="onClick"
                 android:text="Chart"
                 tools:layout_editor_absoluteX="119dp"
                 tools:layout_editor_absoluteY="341dp" />
